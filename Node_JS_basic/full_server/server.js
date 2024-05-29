@@ -1,4 +1,3 @@
-/* eslint-disable */
 import express from 'express';
 import mapRoutes from './routes';
 

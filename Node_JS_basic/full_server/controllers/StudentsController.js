@@ -1,6 +1,4 @@
-/* eslint-disable */
 import readDatabase from '../utils';
-
 
 const VALID_MAJORS = ['CS', 'SWE'];
 
