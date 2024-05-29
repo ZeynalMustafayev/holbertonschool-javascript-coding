@@ -1,20 +1,14 @@
+/* eslint-disable */
 import express from 'express';
-import routes from './routes';
+import mapRoutes from './routes';
 
 const app = express();
-const port = 1245;
+const PORT = 1245;
 
-app.use((req, res, next) => {
-    req.filePath = process.argv[2];
-    next();
+mapRoutes(app);
+app.listen(PORT, () => {
+  console.log(`Server listening on PORT ${PORT}`);
 });
 
-app.use('/', routes);
-
 export default app;
-
-if (require.main === module) {
-    app.listen(port, () => {
-        console.log(`Server is running on port ${port}`);
-    });
-}
+module.exports = app;
