@@ -11,7 +11,8 @@ export default class StudentsController {
             Object.keys(fields).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' })).forEach(field => {
                 response += `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}\n`;
             });
-            res.status(200).send(response); 
+            console.log("Response:", response);
+            res.status(200).send(response);
         } catch (error) {
             res.status(500).send('Cannot load the database');
         }

@@ -1,4 +1,3 @@
-// full_server/utils.js
 import fs from 'fs';
 
 export function readDatabase(filePath) {
@@ -16,6 +15,7 @@ export function readDatabase(filePath) {
                     }
                     fields[field].push(firstName);
                 });
+                console.log("Fields:", fields); // Log the fields structure
                 resolve(fields);
             }
         });
